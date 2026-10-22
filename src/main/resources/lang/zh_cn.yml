@@ -1,0 +1,146 @@
+# ArcanumCraft 中文语言文件
+# 支持颜色代码: &a &b &c &d &e &f &7 &8 &9 &b &k &l &m &n &o
+
+messages:
+  prefix: "&9[魔导工匠] &f"
+  only-player: "&c此命令只能由玩家执行！"
+  no-permission: "&c你没有权限执行此命令！"
+  unknown-subcommand: "&c未知子命令，输入 /arcanumcraft help 查看帮助"
+
+# ===== 魔晶系统 =====
+crystal:
+  balance: "&e你的魔晶余额: &a{0} &e/&a{1}（每日上限）"
+  help: "&7可用命令: /crystal pay <玩家> <数量> | /crystal top"
+  pay:
+    usage: "&7用法: /crystal pay <玩家> <数量>"
+    invalid-amount: "&c请输入有效数字！"
+    negative: "&c数量必须大于0！"
+    player-not-found: "&c玩家未在线！"
+    self: "&c不能给自己转账！"
+    success: "&a已成功转账 &e{0} &a个魔晶给你！&7 剩余: &a{1}"
+    received: "&e{0} &a向你转账了 &a{1} &a个魔晶！"
+    insufficient: "&c魔晶不足！"
+  top:
+    header: "&e━━━ 魔晶排行榜 TOP 10 ━━━"
+    empty: "&7暂无魔晶数据"
+    entry: "&a#{0} {1}: &e{2} 魔晶"
+
+# ===== 传送门系统 =====
+portal:
+  usage: "&7可用命令: /portal set <名称> | /portal list | /portal goto <名称> | /portal remove <名称>"
+  set:
+    usage: "&7用法: /portal set <名称>"
+    name-too-long: "&c传送门名称过长（最多32字符）！"
+    already-exists: "&c传送门「{0}」已存在！"
+    success: "&a传送门「{0}」已建立！"
+    failed: "&c建立传送门失败！"
+  list:
+    header: "&e━━━ 已有传送门 ━━━"
+    empty: "&7暂无传送门"
+    entry: "&a{0} &7→ &f世界:{1} X:{2} Y:{3} Z:{4}"
+  remove:
+    usage: "&7用法: /portal remove <名称>"
+    success: "&a已删除传送门「{0}」"
+    not-found: "&c传送门「{0}」不存在或无权限！"
+  goto:
+    usage: "&7用法: /portal goto <名称>"
+    success: "&a正在传送至「{0}」..."
+    not-found: "&c传送门「{0}」不存在！"
+
+# ===== 熔炉系统 =====
+forge:
+  usage: "&7可用命令: /forge status | /forge mine | /forge remove <名称>"
+  status:
+    self: "&e熔炉类型: &a{0} &e耐久: &a{1}/{2}"
+    none: "&7周围未发现自定义熔炉"
+  mine:
+    no-forge: "&c目标方块不是自定义熔炉！"
+    success: "&a成功破坏「{0}」，返还 &e{1} &a魔晶"
+    no-permission: "&c这不是你的熔炉！"
+  remove:
+    usage: "&7用法: /forge remove <名称>"
+    info: "&7按距离点击熔炉后使用 /forge mine 来破坏"
+  craft:
+    info: "&7右键熔炉打开GUI，放入物品后自动加工"
+
+# ===== 附魔系统 =====
+enchant:
+  usage: "&7可用命令: /enchant info | /enchant upgrade | /enchant imbue <附魔名> <等级>"
+  info:
+    header: "&e━━━ 自定义附魔列表 ━━━"
+    entry: "&a{0} &7- 等级 {1}-{2} &7| 费用: &e{3} 魔晶"
+  upgrade:
+    header: "&e当前物品: &a{0}"
+    no-item: "&c请先手持要附魔的物品！"
+  imbue:
+    usage: "&7用法: /enchant imbue <附魔名> <等级>"
+    invalid-level: "&c等级格式无效！"
+    no-item: "&c请先手持要附魔的物品！"
+    success: "&a成功为物品附加附魔「{0} L{1}」！"
+    failed: "&c附魔失败，请检查物品是否支持该附魔！"
+
+# ===== 元素系统 =====
+element:
+  usage: "&7可用命令: /element shards | /element craft <元素> | /element resistance <类型>"
+  shards:
+    header: "&e━━━ 你的元素碎片 ━━━"
+    entry: "&a{0} 元素碎片: &e{1}"
+  craft:
+    usage: "&7用法: /element craft <火/水/土/风/奥术>"
+    invalid-type: "&c无效的元素类型！"
+    insufficient: "&c{0}元素碎片不足，需要 {1} 个！"
+    success: "&a成功合成「{0}」元素水晶！"
+  resistance:
+    usage: "&7用法: /element resistance <火抗/水抗/土抗/风抗>"
+    invalid-type: "&c无效的元素抗性类型！"
+    applied: "&a已激活 {0} 抗性效果！"
+
+# ===== 任务系统 =====
+quest:
+  usage: "&7可用命令: /quest list | /quest progress <任务ID> | /quest claim <任务ID>"
+  list:
+    header: "&e━━━ 当前任务列表 ━━━"
+    entry: "&a{0} &7[{1}] &f进度: &e{2}/{3}"
+    total: "&7总共 {0} 个任务，已完成 {1} 个"
+  progress:
+    usage: "&7用法: /quest progress <任务ID>"
+    not-found: "&c任务「{0}」不存在！"
+    detail: "&e任务: &a{0} &e进度: &a{1}/{2}"
+    claimable: "&a该任务已完成，使用 /quest claim <任务ID> 领取奖励"
+  claim:
+    usage: "&7用法: /quest claim <任务ID>"
+    success: "&a成功领取任务「{0}」的奖励！"
+    not-ready: "&c任务「{0}」尚未完成！"
+
+# ===== 成就系统 =====
+achievement:
+  usage: "&7可用命令: /achievement list | /achievement progress | /achievement unlocked"
+  list:
+    header: "&e━━━ 成就列表 ━━━"
+    total: "&7已解锁 &a{0} &7/ &e{1} &7个成就"
+    separator: "&7──────────────────────"
+    entry: "&a{0} {1} &7- {2} &7(需求: {3})"
+  progress:
+    header: "&e━━━ 成就进度 ━━━"
+    empty: "&7暂无进行中成就"
+    entry: "&a{0}: &e{1}/{2}"
+  unlocked:
+    header: "&e━━━ 已解锁成就 ━━━"
+    empty: "&c你还没有解锁任何成就！"
+    entry: "&a{0}"
+
+# ===== 主命令 =====
+arcanumcraft:
+  help:
+    header: "&e━━━ ArcanumCraft 帮助 ━━━"
+    crystal: "&7/cmd &e/crystal &f- 查看/管理魔晶"
+    portal: "&7/cmd &e/portal &f- 管理传送门网络"
+    forge: "&7/cmd &e/forge &f- 管理智能熔炉"
+    enchant: "&7/cmd &e/enchant &f- 使用魔导祭坛"
+    element: "&7/cmd &e/element &f- 元素系统与抗性"
+    quest: "&7/cmd &e/quest &f- 任务系统"
+    achievement: "&7/cmd &e/achievement &f- 成就系统"
+    main: "&7/cmd &e/arcanumcraft reload &f- 重载配置（需op）"
+  version: "&eArcanumCraft 版本: &a{0}"
+  reload:
+    success: "&a配置已重载！"

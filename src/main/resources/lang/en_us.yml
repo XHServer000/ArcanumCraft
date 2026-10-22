@@ -1,0 +1,146 @@
+# ArcanumCraft English Language File
+# Supports color codes: &a &b &c &d &e &f &7 &8 &9 &b &k &l &m &n &o
+
+messages:
+  prefix: "&9[ArcanumCraft] &f"
+  only-player: "&cThis command can only be used by players!"
+  no-permission: "&cYou do not have permission to use this command!"
+  unknown-subcommand: "&cUnknown sub-command, type /arcanumcraft help for assistance."
+
+# ===== Crystal System =====
+crystal:
+  balance: "&eYour Crystal Balance: &a{0} &e/&a{1} (daily limit)"
+  help: "&7Available: /crystal pay <player> <amount> | /crystal top"
+  pay:
+    usage: "&7Usage: /crystal pay <player> <amount>"
+    invalid-amount: "&cPlease enter a valid number!"
+    negative: "&cAmount must be greater than 0!"
+    player-not-found: "&cPlayer is not online!"
+    self: "&cYou cannot transfer to yourself!"
+    success: "&aSuccessfully transferred &e{0} &acystals! Remaining: &a{1}"
+    received: "&e{0} &asent you &a{1} &acystals!"
+    insufficient: "&cNot enough crystals!"
+  top:
+    header: "&e━━━ Crystal Leaderboard TOP 10 ━━━"
+    empty: "&7No crystal data available."
+    entry: "&a#{0} {1}: &e{2} crystals"
+
+# ===== Portal System =====
+portal:
+  usage: "&7Available: /portal set <name> | /portal list | /portal goto <name> | /portal remove <name>"
+  set:
+    usage: "&7Usage: /portal set <name>"
+    name-too-long: "&cPortal name too long (max 32 characters)!"
+    already-exists: "&cPortal '{0}' already exists!"
+    success: "&aPortal '{0}' has been created!"
+    failed: "&cFailed to create portal!"
+  list:
+    header: "&e━━━ Existing Portals ━━━"
+    empty: "&7No portals created yet."
+    entry: "&a{0} &7-> &fWorld:{1} X:{2} Y:{3} Z:{4}"
+  remove:
+    usage: "&7Usage: /portal remove <name>"
+    success: "&aPortal '{0}' has been removed."
+    not-found: "&cPortal '{0}' does not exist or you lack permission!"
+  goto:
+    usage: "&7Usage: /portal goto <name>"
+    success: "&aTeleporting to '{0}'..."
+    not-found: "&cPortal '{0}' does not exist!"
+
+# ===== Forge System =====
+forge:
+  usage: "&7Available: /forge status | /forge mine | /forge remove <name>"
+  status:
+    self: "&eForge Type: &a{0} &eDurability: &a{1}/{2}"
+    none: "&7No custom forge found nearby."
+  mine:
+    no-forge: "&cTarget block is not a custom forge!"
+    success: "&aSuccessfully destroyed '{0}', refunded &e{1} &acystals"
+    no-permission: "&cThis is not your forge!"
+  remove:
+    usage: "&7Usage: /forge remove <name>"
+    info: "&7Right-click a forge to open its GUI, then use /forge mine to destroy it."
+  craft:
+    info: "&7Right-click a forge to open its GUI. Place items inside and they will auto-process."
+
+# ===== Enchant System =====
+enchant:
+  usage: "&7Available: /enchant info | /enchant upgrade | /enchant imbue <enchant> <level>"
+  info:
+    header: "&e━━━ Custom Enchantments ━━━"
+    entry: "&a{0} &7- Level {1}-{2} &7| Cost: &e{3} crystals"
+  upgrade:
+    header: "&eCurrent Item: &a{0}"
+    no-item: "&cPlease hold an item to enchant!"
+  imbue:
+    usage: "&7Usage: /enchant imbue <enchant-name> <level>"
+    invalid-level: "&cInvalid level format!"
+    no-item: "&cPlease hold an item to enchant!"
+    success: "&aSuccessfully applied '{0} L{1}' to your item!"
+    failed: "&cEnchant failed. Check if the item supports this enchantment!"
+
+# ===== Element System =====
+element:
+  usage: "&7Available: /element shards | /element craft <element> | /element resistance <type>"
+  shards:
+    header: "&e━━━ Your Element Shards ━━━"
+    entry: "&a{0} Shards: &e{1}"
+  craft:
+    usage: "&7Usage: /element craft <fire/water/earth/air/arcane>"
+    invalid-type: "&cInvalid element type!"
+    insufficient: "&cNot enough {0} shards, need {1}!"
+    success: "&aSuccessfully crafted {0} Element Crystal!"
+  resistance:
+    usage: "&7Usage: /element resistance <fire/water/earth/air>"
+    invalid-type: "&cInvalid resistance type!"
+    applied: "&aActivated {0} resistance effect!"
+
+# ===== Quest System =====
+quest:
+  usage: "&7Available: /quest list | /quest progress <questId> | /quest claim <questId>"
+  list:
+    header: "&e━━━ Current Quests ━━━"
+    entry: "&a{0} &7[{1}] &fProgress: &e{2}/{3}"
+    total: "&7Total {0} quests, {1} completed"
+  progress:
+    usage: "&7Usage: /quest progress <questId>"
+    not-found: "&cQuest '{0}' does not exist!"
+    detail: "&eQuest: &a{0} &eProgress: &a{1}/{2}"
+    claimable: "&aQuest completed! Use /quest claim <questId> to reward"
+  claim:
+    usage: "&7Usage: /quest claim <questId>"
+    success: "&aClaimed reward for quest '{0}'!"
+    not-ready: "&cQuest '{0}' is not completed!"
+
+# ===== Achievement System =====
+achievement:
+  usage: "&7Available: /achievement list | /achievement progress | /achievement unlocked"
+  list:
+    header: "&e━━━ Achievements ━━━"
+    total: "&7Unlocked &a{0} &7/ &e{1} &7achievements"
+    separator: "&7──────────────────────"
+    entry: "&a{0} {1} &7- {2} &7(Req: {3})"
+  progress:
+    header: "&e━━━ Achievement Progress ━━━"
+    empty: "&7No achievements in progress"
+    entry: "&a{0}: &e{1}/{2}"
+  unlocked:
+    header: "&e━━━ Unlocked Achievements ━━━"
+    empty: "&cYou haven't unlocked any achievements yet!"
+    entry: "&a{0}"
+
+# ===== Main Command =====
+arcanumcraft:
+  help:
+    header: "&e━━━ ArcanumCraft Help ━━━"
+    crystal: "&7/cmd &e/crystal &f- View/manage crystals"
+    portal: "&7/cmd &e/portal &f- Manage portal network"
+    forge: "&7/cmd &e/forge &f- Manage smart forges"
+    enchant: "&7/cmd &e/enchant &f- Use arcane altar"
+    element: "&7/cmd &e/element &f- Element system & resistances"
+    quest: "&7/cmd &e/quest &f- Quest system"
+    achievement: "&7/cmd &e/achievement &f- Achievement system"
+    main: "&7/cmd &e/arcanumcraft reload &f- Reload config (op only)"
+  version: "&eArcanumCraft Version: &a{0}"
+  reload:
+    success: "&aConfiguration reloaded!"

@@ -1,0 +1,60 @@
+name: ArcanumCraft
+version: '${project.version}'
+main: github.xhserver123.arcanumcraft.ArcanumCraftPlugin
+api-version: '1.20'
+author: XHServer
+description: 魔导工匠 - 融合魔法与科技的综合性服务端插件
+load-before: []
+softdepend: [Vault]
+
+commands:
+  crystal:
+    description: 查看魔晶系统信息
+    usage: /<command> [info|pay|top]
+    permission: arcanumcraft.crystal.use
+  portal:
+    description: 传送门系统命令
+    usage: /<command> [set|list|remove|goto]
+    permission: arcanumcraft.portal.use
+  forge:
+    description: 熔炉系统命令
+    usage: /<command> [status|craft|mine]
+    permission: arcanumcraft.forge.use
+  enchant:
+    description: 附魔祭坛命令
+    usage: /<command> [info|upgrade|imbue]
+    permission: arcanumcraft.enchant.use
+  element:
+    description: 元素系统命令
+    usage: /<command> [shards|craft|resistance]
+    permission: arcanumcraft.element.use
+  quest:
+    description: 任务系统命令
+    usage: /<command> [list|progress|claim]
+    permission: arcanumcraft.quest.use
+  achievement:
+    description: 成就系统命令
+    usage: /<command> [list|progress|unlocked]
+    permission: arcanumcraft.achievement.use
+  arcanumcraft:
+    description: 插件主命令
+    usage: /<command> [reload|help]
+    permission: arcanumcraft.admin
+
+permissions:
+  arcanumcraft.crystal.use:
+    default: true
+  arcanumcraft.portal.use:
+    default: true
+  arcanumcraft.forge.use:
+    default: true
+  arcanumcraft.enchant.use:
+    default: true
+  arcanumcraft.element.use:
+    default: true
+  arcanumcraft.quest.use:
+    default: true
+  arcanumcraft.achievement.use:
+    default: true
+  arcanumcraft.admin:
+    default: op
